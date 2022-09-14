@@ -288,7 +288,6 @@ class Cursor(BaseCursor):
         return self
 
     def sanitize_query(self, query: str) -> str:
-        query = query.replace('"', "")
         query = query.replace("  ", " ")
         query = query.replace("\n", " ")
         # remove dummy schema from queries
